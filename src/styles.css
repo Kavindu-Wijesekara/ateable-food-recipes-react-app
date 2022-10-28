@@ -1,0 +1,389 @@
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main {
+    margin: 2% 10%;
+}
+
+.app {
+    height: 100%;
+}
+
+.app.dark {
+    background-color: #282D35;
+}
+
+nav {
+    font-family: "Fuzzy Bubbles", cursive;
+    padding: 20px 5%;
+    width: 100%;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+.nav--brand {
+    margin-right: auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #21222A;
+}
+
+nav.dark .nav--brand {
+    color: white !important;
+}
+
+.nav--input {
+    height: 30px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #1890ff;
+    padding: 5px 10px;
+    outline: none;
+    background-color: transparent;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    cursor: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav.dark .nav--input {
+    color: white;
+}
+
+.nav--input:focus {
+    outline: none;
+}
+
+nav svg {
+    margin-left: 10px;
+    background-color: #21222A;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+nav.dark svg {
+    border: 1px solid white;
+}
+
+nav svg:active {
+    background-color: white;
+    color: #21222A;
+    border: 1px solid #21222A;
+}
+
+.nav--searchbox {
+    display: flex;
+    align-items: center;
+}
+
+.nav--searchbox form {
+    display: flex;
+    align-items: center;
+}
+
+nav.dark {
+    background-color: #21222A;
+}
+
+.toggler {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.toggler p {
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+
+.toggler--slider {
+    width: 25px;
+    height: 13px;
+    background-color: #2B283A;
+    border-radius: 2rem;
+    margin-inline: 7px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+    box-sizing: content-box;
+}
+
+nav.dark .toggler--slider {
+    border-color: white;
+    background-color: #F5F5F5;
+}
+
+.toggler--slider--circle {
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+nav.dark .toggler--slider--circle {
+    background-color: black;
+}
+
+.toggler--light {
+    color: #2B283A;
+}
+
+nav.dark .toggler--light {
+    color: #918E9B;
+}
+
+.toggler--dark {
+    color: #D5D4D8;
+}
+
+nav.dark .toggler-dark {
+    color: #FFFFFF;
+}
+
+nav.dark .toggler--slider {
+    justify-content: flex-end;
+}
+
+
+/* Home Styles */
+
+.loading {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.home--heading {
+    padding-bottom: 2rem;
+    font-weight: 400;
+}
+
+.home.dark .home--heading {
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-gap: 3rem;
+    padding-bottom: 20px;
+}
+
+.card {
+    min-height: 20rem;
+    overflow: hidden;
+    border-radius: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.card--image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.card--description {
+    padding: 1rem;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, 0%);
+    width: 100%;
+    text-align: center;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card--title {
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    padding-bottom: 10px;
+}
+
+.gradient {
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            to bottom,
+            hsla(0, 0%, 0%, 0) 0%,
+            hsla(0, 0%, 0%, 0.013) 12.3%,
+            hsla(0, 0%, 0%, 0.048) 23.8%,
+            hsla(0, 0%, 0%, 0.103) 34.6%,
+            hsla(0, 0%, 0%, 0.174) 44.6%,
+            hsla(0, 0%, 0%, 0.257) 53.9%,
+            hsla(0, 0%, 0%, 0.349) 62.4%,
+            hsla(0, 0%, 0%, 0.447) 70.1%,
+            hsla(0, 0%, 0%, 0.546) 76.9%,
+            hsla(0, 0%, 0%, 0.644) 82.9%,
+            hsla(0, 0%, 0%, 0.736) 88.1%,
+            hsla(0, 0%, 0%, 0.82) 92.3%,
+            hsla(0, 0%, 0%, 0.892) 95.6%,
+            hsla(0, 0%, 0%, 0.948) 98.1%,
+            hsla(0, 0%, 0%, 0.986) 99.5%,
+            hsl(0, 0%, 0%) 100%
+        );
+}
+
+.card--score {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+ .red {
+    color: rgb(255, 98, 98);
+}
+ .blue {
+    color: rgb(0, 195, 255);
+}
+ .green {
+    color: rgb(0, 255, 98);
+}
+
+
+/* Details Page */
+
+
+.details.dark .details--title,
+.details.dark .details--more, 
+.details.dark span {
+    color: white;
+}
+
+.details--container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.details--left_side {
+    margin: 3rem 1rem 3rem 0;
+}
+
+.details--image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 2rem;
+    object-fit: cover;
+}
+
+.details--image img {
+    height: 100%;
+    width: 100%;
+}
+
+.details--right__side {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 20px 0 20px 20px;
+}
+
+.details--score,
+.details--like {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+}
+
+.chip{
+	padding: 5px;
+	border-radius: 10px;
+	font-weight: 600;
+	font-size: 12px;
+	box-shadow: 0 2px 5px rgba(0,0,0,.25);
+	margin: auto 5px;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.chip.cuisines {
+    cursor: pointer;
+}
+
+.details.dark .chip {
+    color: white;
+    background-color: #21222A;
+}
+
+.details--more {
+    margin: 2rem 0;
+}
+
+.details--more p {
+    margin-top: 1rem;
+    color: #282D35;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: justify;
+    background: rgba( 245, 245, 245, 0.5 );
+    line-height: 1.4;
+}
+
+.details--more p a {
+    text-decoration: none;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    line-height: 1.5;
+}
+
+.center span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #21222A;
+}
+
+footer.dark {
+    background-color: #21222A;
+}
+
+footer.dark .center span {
+    color: white;
+}
