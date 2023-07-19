@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a76d9125-8cb6-44e4-bad9-aee4b9b47efb/deploy-status)](https://app.netlify.com/sites/ateable/deploys)
+
 # Ateable Recipe Site made of React
 
 
